@@ -1,0 +1,82 @@
+{
+    "policies": {
+        "Cookies": {
+            "Behavior": "reject-tracker-and-partition-foreign",
+            "ExpireAtSessionEnd": true
+        },
+        "DisableDefaultBrowserAgent": true,
+        "DisableFirefoxAccounts": true,
+        "DisablePocket": true,
+        "DNSOverHTTPS": {
+            "Enabled": true,
+            "ProviderURL": "https://dns.quad9.net/dns-query",
+            "Locked": true
+        },
+        "EnableTrackingProtection": {
+            "Value": true,
+            "Cryptomining": true,
+            "Fingerprinting": true
+        },
+        "EncryptedMediaExtensions": {
+            "Enabled": false
+        },
+        "ExtensionSettings": {
+            "*": {
+                "install_sources": ["about:addons","https://addons.mozilla.org/"]
+            },
+            "uBlock0@raymondhill.net": {
+                "installation_mode": "force_installed",
+                "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi"
+            }
+        },
+        "FirefoxHome": {
+            "Search": true,
+            "TopSites": true,
+            "SponsoredTopSites": false,
+            "Highlights": false,
+            "Pocket": false,
+            "SponsoredPocket": false,
+            "Snippets": true
+        },
+        "HardwareAcceleration": true,
+        "NetworkPrediction": false,
+        "NoDefaultBookmarks": false,
+        "OfferToSaveLogins": true,
+        "PasswordManagerEnabled": false,
+        "Permissions": {
+            "Camera": {
+                "BlockNewRequests": false,
+                "Locked": false
+            },
+            "Microphone": {
+                "BlockNewRequests": false,
+                "Locked": false
+            },
+            "Location": {
+                "BlockNewRequests": true,
+                "Locked": true
+            },
+            "Notifications": {
+                "BlockNewRequests": false,
+                "Locked": false
+            },
+            "Autoplay": {
+                "Allow": [
+                    "https://twitch.tv"
+                ],
+                "Default": "block-audio-video",
+                "Locked": false
+            }
+        },
+        "Preferences": {
+            "browser.backspace_action": {
+              "Value": 0,
+              "Status": "default"
+            },
+            "browser.contentblocking.category": {
+              "Value": "strict",
+              "Status": "user"
+            }
+        }
+    }
+}
