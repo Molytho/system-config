@@ -1,15 +1,7 @@
 {
     "policies": {
-        "Cookies": {
-            "Behavior": "reject-tracker-and-partition-foreign"
-        },
         "DisableFirefoxAccounts": true,
         "DisablePocket": true,
-        "EnableTrackingProtection": {
-            "Value": true,
-            "Cryptomining": true,
-            "Fingerprinting": true
-        },
         "EncryptedMediaExtensions": {
             "Enabled": false
         },
@@ -69,6 +61,10 @@
             "browser.contentblocking.category": {
               "Value": "strict",
               "Status": "user"
+            },
+            "dom.security.https_only_mode": {
+                "Value": true,
+                "Status": "locked"
             },
             "media.ffmpeg.vaapi.enabled": {
               "Value": true,

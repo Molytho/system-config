@@ -1,8 +1,5 @@
 {
     "policies": {
-        "Cookies": {
-            "Behavior": "reject-tracker-and-partition-foreign"
-        },
         "DisableDefaultBrowserAgent": true,
         "DisableFirefoxAccounts": true,
         "DisablePocket": true,
@@ -10,11 +7,6 @@
             "Enabled": true,
             "ProviderURL": "https://dns.quad9.net/dns-query",
             "Locked": true
-        },
-        "EnableTrackingProtection": {
-            "Value": true,
-            "Cryptomining": true,
-            "Fingerprinting": true
         },
         "EncryptedMediaExtensions": {
             "Enabled": false
@@ -78,6 +70,10 @@
             "browser.contentblocking.category": {
                 "Value": "strict",
                 "Status": "user"
+            },
+            "dom.security.https_only_mode": {
+                "Value": true,
+                "Status": "locked"
             }
         }
     }
