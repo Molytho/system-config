@@ -1,0 +1,12 @@
+# Reset environment by default
+Defaults      env_reset
+Defaults      !env_editor
+# Set default EDITOR to restricted version of nano, and do not allow visudo to use EDITOR/VISUAL.
+Defaults      editor=/usr/bin/rnano
+# Set umask to 0022
+Defaults umask_override
+Defaults umask = 0022
+# Only allow tty as the password is cleartext otherwise
+Defaults     requiretty
+# Use a hard-coded PATH instead of the user's to find commands
+Defaults     secure_path="/usr/sbin:/usr/bin"
