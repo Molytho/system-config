@@ -5,4 +5,4 @@
 ## or netgroups.
 User_Alias    BOOTNEXT_USERS = robin
 
-BOOTNEXT_USERS ALL=NOPASSWD: /usr/sbin/efibootmgr ^--bootnext [0-9]+$
+BOOTNEXT_USERS ALL=NOPASSWD: /usr/bin/efibootmgr ^--bootnext [0-9]{1,4}$
