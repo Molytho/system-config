@@ -1,13 +1,29 @@
 {
     "policies": {
+        "Cookies": {
+            "Behavior": "reject-foreign"
+        },
         "DisableFirefoxAccounts": true,
+        "DisableFirefoxScreenshots": true,
+        "DisableFirefoxStudies": true,
         "DisablePocket": true,
+        "DisableTelemetry": true,
+        "DontCheckDefaultBrowser": true,
+        "EnableTrackingProtection": {
+            "Value": true,
+            "Cryptomining": true,
+            "Fingerprinting": true,
+            "EmailTracking": true
+        },
         "EncryptedMediaExtensions": {
             "Enabled": false
         },
         "ExtensionSettings": {
             "*": {
-                "install_sources": ["about:addons","https://addons.mozilla.org/"]
+                "install_sources": [
+                    "about:addons",
+                    "https://addons.mozilla.org/"
+                ]
             },
             "uBlock0@raymondhill.net": {
                 "installation_mode": "force_installed",
@@ -25,7 +41,7 @@
         },
         "HardwareAcceleration": true,
         "NetworkPrediction": false,
-        "NoDefaultBookmarks": false,
+        "NoDefaultBookmarks": true,
         "OfferToSaveLogins": true,
         "PasswordManagerEnabled": false,
         "Permissions": {
@@ -55,20 +71,20 @@
         },
         "Preferences": {
             "browser.backspace_action": {
-              "Value": 0,
-              "Status": "default"
+                "Value": 0,
+                "Status": "default"
             },
             "browser.contentblocking.category": {
-              "Value": "strict",
-              "Status": "user"
+                "Value": "strict",
+                "Status": "user"
             },
             "dom.security.https_only_mode": {
                 "Value": true,
                 "Status": "locked"
             },
             "media.ffmpeg.vaapi.enabled": {
-              "Value": true,
-              "Status": "user"
+                "Value": true,
+                "Status": "user"
             }
         }
     }
