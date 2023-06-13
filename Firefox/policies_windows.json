@@ -1,12 +1,26 @@
 {
     "policies": {
+        "CaptivePortal": false,
+        "Cookies": {
+            "Behavior": "reject-foreign"
+        },
         "DisableDefaultBrowserAgent": true,
         "DisableFirefoxAccounts": true,
+        "DisableFirefoxScreenshots": true,
+        "DisableFirefoxStudies": true,
         "DisablePocket": true,
+        "DisableTelemetry": true,
         "DNSOverHTTPS": {
             "Enabled": true,
             "ProviderURL": "https://dns.quad9.net/dns-query",
             "Locked": true
+        },
+        "DontCheckDefaultBrowser": true,
+        "EnableTrackingProtection": {
+            "Value": true,
+            "Cryptomining": true,
+            "Fingerprinting": true,
+            "EmailTracking": true
         },
         "EncryptedMediaExtensions": {
             "Enabled": false
@@ -34,9 +48,13 @@
         },
         "HardwareAcceleration": true,
         "NetworkPrediction": false,
-        "NoDefaultBookmarks": false,
-        "OfferToSaveLogins": true,
+        "NoDefaultBookmarks": true,
+        "OfferToSaveLogins": false,
         "PasswordManagerEnabled": false,
+        "PDFjs": {
+            "Enabled": true,
+            "EnablePermissions": false
+        },
         "Permissions": {
             "Camera": {
                 "BlockNewRequests": false,
