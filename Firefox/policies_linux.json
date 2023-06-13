@@ -1,5 +1,6 @@
 {
     "policies": {
+        "CaptivePortal": false,
         "Cookies": {
             "Behavior": "reject-foreign"
         },
@@ -42,8 +43,12 @@
         "HardwareAcceleration": true,
         "NetworkPrediction": false,
         "NoDefaultBookmarks": true,
-        "OfferToSaveLogins": true,
+        "OfferToSaveLogins": false,
         "PasswordManagerEnabled": false,
+        "PDFjs": {
+            "Enabled": true,
+            "EnablePermissions": false
+        },
         "Permissions": {
             "Camera": {
                 "BlockNewRequests": false,
