@@ -1,0 +1,7 @@
+set $shortcut_key $left30
+## shortcut:
+    mode "shortcut" {
+        # back to normal: Enter or Escape or $mod+r
+        bindsym $mod+$shortcut_key mode "default"
+    }
+bindsym $mod+$shortcut_key mode "shortcut"

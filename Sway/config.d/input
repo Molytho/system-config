@@ -1,0 +1,27 @@
+## Input configuration
+#
+input type:pointer {
+    accel_profile flat
+}
+# Keyboard
+input type:keyboard {
+    xkb_layout de
+}
+# Mouse
+input type:touchpad {
+    natural_scroll enabled
+    tap enabled
+    drag enabled
+    scroll_method two_finger
+    events disabled_on_external_mouse
+}
+# Touchscreen
+input 1386:21098:Wacom_HID_526A_Pen {
+    map_to_output eDP-1
+}
+input 1386:21098:Wacom_HID_526A_Finger {
+    map_to_output eDP-1
+}
+
+# Seat
+seat seat0 xcursor_theme Breeze 24

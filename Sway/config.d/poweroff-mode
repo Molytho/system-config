@@ -1,0 +1,19 @@
+set $poweroff_key $right11
+## Poweroff:
+    mode "poweroff" {
+        bindsym $right21 mode "default" ; exec sway-safe-exit && systemctl poweroff
+        bindsym $right22 mode "default" ; exec sway-safe-exit && systemctl reboot
+        bindsym --locked $right23 mode "default" ; exec systemctl suspend
+        bindsym $right24 mode "default" ; exec sway-safe-exit && sudo /usr/bin/efibootmgr --bootnext 4 && systemctl reboot
+
+        bindsym $mod+$right21 mode "default" ; exec sway-safe-exit && systemctl poweroff
+        bindsym $mod+$right22 mode "default" ; exec sway-safe-exit && systemctl soft-reboot
+        bindsym --locked $mod+$right23 mode "default" ; exec systemctl suspend
+        bindsym $mod+$right24 mode "default" ; exec sway-sage-exit && sudo /usr/bin/efibootmgr --bootnext 4 && systemctl reboot
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym --locked Return mode "default"
+        bindsym --locked Escape mode "default"
+        bindsym --locked $mod+$poweroff_key mode "default"
+    }
+bindsym --locked $mod+$poweroff_key mode "poweroff"

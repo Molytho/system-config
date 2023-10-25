@@ -1,0 +1,3 @@
+for_window [app_id="^org.keepassxc.KeePassXC$" title="(Datenbank entsperren|Browser-Zugriffsanfrage|KeePassXC - Zugriffsanfrage)"] floating enable
+for_window [app_id="^ferdi$" title="^$"] floating enable
+for_window [class="^zoom$" window_type="unknown"] floating enable

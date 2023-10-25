@@ -1,0 +1,5 @@
+#bindswitch tablet:on exec systemctl --user stop swayidle.service
+#bindswitch tablet:off exec systemctl --user start swayidle.service
+
+#bindswitch lid:toggle exec echo "Lid moved"
+#bindswitch tablet:toggle exec echo "Tablet moved"

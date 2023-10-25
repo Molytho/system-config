@@ -1,0 +1,150 @@
+include variables
+
+### i3 configuration
+#
+## Basics:
+    # Font
+    font $font
+    # Gaps
+    gaps left 2
+    gaps right 2
+    gaps bottom 2
+    # Start a terminal
+    bindsym $mod+Return exec $term
+    # kill focused window
+    bindsym $mod+Shift+$left11 kill
+    # Start your launcher
+    bindsym $mod+$left23 exec $menu
+    # Lock screen
+    bindsym $mod+$right13 exec loginctl lock-session
+    # Drag floating windows by holding down $mod and left mouse button.
+    # Resize them with right mouse button + $mod.
+    # Despite the name, also works for non-floating windows.
+    # Change normal to inverse to use left mouse button for resizing and right
+    # mouse button for dragging.
+    floating_modifier $mod normal
+    # Reload configuration file
+    bindsym $mod+Shift+$left33 reload
+## General:
+    # hide borders when only one window is on a screen
+    hide_edge_borders smart
+    # Let the focus not follow the mouse movement
+    focus_follows_mouse no
+    # Disable mouse warping
+    mouse_warping none
+    # Save where we come from when switching between workspaces
+    workspace_auto_back_and_forth yes
+    # Dont show window titles
+    default_border pixel
+## Moving around:
+    # Move your focus around
+    bindsym $mod+$left focus left
+    bindsym $mod+$down focus down
+    bindsym $mod+$up focus up
+    bindsym $mod+$right focus right
+    # Move the focused window with the same, but add Shift
+    bindsym $mod+Shift+$left move left
+    bindsym $mod+Shift+$down move down
+    bindsym $mod+Shift+$up move up
+    bindsym $mod+Shift+$right move right
+## Workspaces:
+    # Switch to workspace
+    bindsym $mod+1 workspace number 1
+    bindsym $mod+2 workspace number 2
+    bindsym $mod+3 workspace number 3
+    bindsym $mod+4 workspace number 4
+    bindsym $mod+5 workspace number 5
+    bindsym $mod+6 workspace number 6
+    bindsym $mod+7 workspace number 7
+    bindsym $mod+8 workspace number 8
+    bindsym $mod+9 workspace number 9
+    bindsym $mod+0 workspace number 10
+    # Move focused container to workspace
+    bindsym $mod+Shift+1 move container to workspace number 1
+    bindsym $mod+Shift+2 move container to workspace number 2
+    bindsym $mod+Shift+3 move container to workspace number 3
+    bindsym $mod+Shift+4 move container to workspace number 4
+    bindsym $mod+Shift+5 move container to workspace number 5
+    bindsym $mod+Shift+6 move container to workspace number 6
+    bindsym $mod+Shift+7 move container to workspace number 7
+    bindsym $mod+Shift+8 move container to workspace number 8
+    bindsym $mod+Shift+9 move container to workspace number 9
+    bindsym $mod+Shift+0 move container to workspace number 10
+    # Switch aroung with tab
+    bindsym $mod+Tab workspace next_on_output
+    bindsym $mod+Shift+Tab workspace prev_on_output
+## Layout stuff:
+    # You can "split" the current object of your focus with
+    # $mod+b or $mod+v, for horizontal and vertical splits
+    # respectively.
+    bindsym $mod+$left35 splith
+    bindsym $mod+$left34 splitv
+    # Switch the current container between different layout styles
+    bindsym $mod+$left22 layout stacking
+    bindsym $mod+$left12 layout tabbed
+    bindsym $mod+$left13 layout toggle split
+    # Make the current focus fullscreen
+    bindsym $mod+$left24 fullscreen
+    # Toggle the current focus between tiling and floating mode
+    bindsym $mod+Shift+space floating toggle
+    # Swap focus between the tiling area and the floating area
+    bindsym $mod+space focus mode_toggle
+    # Move focus to the parent container
+    bindsym $mod+$left21 focus parent
+    # focus the child container
+    bindsym $mod+$left31 focus child
+## Scratchpad:
+    # Sway has a "scratchpad", which is a bag of holding for windows.
+    # You can send windows there and get them back later.
+    # Move the currently focused window to the scratchpad
+    bindsym $mod+Shift+$right34 move scratchpad
+    # Show the next scratchpad window or hide the focused scratchpad window.
+    # If there are multiple scratchpad windows, this command cycles through them.
+    bindsym $mod+$right34 scratchpad show
+## Resizing:
+    set $resize_key $left14
+    mode "resize" {
+        # left will shrink the containers width
+        # right will grow the containers width
+        # up will shrink the containers height
+        # down will grow the containers height
+        bindsym $right21 resize shrink width 10px
+        bindsym $right22 resize shrink height 10px
+        bindsym $right23 resize grow height 10px
+        bindsym $right24 resize grow width 10px
+
+        # Return to default mode
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+$resize_key mode "default"
+    }
+    bindsym $mod+$resize_key mode "resize"
+## Screenshots
+    bindsym XF86Launch1 exec screenshot
+    bindsym Mod4+print exec grim -c
+## XF86:
+    ## PulseAudio
+    # Use pactl to adjust volume in PulseAudio.
+    bindsym XF86AudioRaiseVolume exec  pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym XF86AudioLowerVolume exec  pactl set-sink-volume @DEFAULT_SINK@ -5%
+    bindsym XF86AudioMute exec  pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym XF86AudioMicMute exec  pactl set-source-mute @DEFAULT_SOURCE@ toggle
+    ## Taschenrechner
+    bindsym XF86Calculator exec alacritty -e python
+    ## Bildschirmhelligkeit
+    bindsym --locked XF86MonBrightnessDown exec brightnessctl -q --exponent=0.7686217868402407 --min-value=9600 s 5%-
+    bindsym --locked XF86MonBrightnessUp exec brightnessctl -q --exponent=0.7686217868402407 --min-value=9600 s +5%
+    ## audio control
+    bindsym --locked XF86AudioPlay exec playerctl play-pause
+    bindsym --locked XF86AudioPause exec playerctl play-pause
+    bindsym --locked XF86AudioNext exec playerctl next
+    bindsym --locked XF86AudioPrev exec playerctl previous
+## Include Drop-Ins
+include /etc/sway/config.d/*
+include ~/.config/sway/config.d/*
+
+###
+# XF86RFKill = Flugmodus Geht => KernelTreiber
+# XF86Calculator = Taschenrechner
+# XF86MonBrightnessUp = Heller
+# XF86MonBrightnessDown = Dunkler

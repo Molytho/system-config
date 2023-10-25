@@ -1,0 +1,15 @@
+set $management_key $right30
+## Management:
+    mode "management" {
+        bindsym $right21 exec rfkill toggle bluetooth ; mode "default"
+        bindsym $right22 exec alacritty -e bluetoothctl ; mode "default"
+
+        bindsym $mod+$right21 exec rfkill roggle bluetooth ; mode "default"
+        bindsym $mod+$right22 exec alacritty -e bluetoothctl ; mode "default"
+
+        # back to normal
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+$management_key mode "default"
+    }
+bindsym $mod+$management_key mode "management"

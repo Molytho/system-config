@@ -1,0 +1,50 @@
+### Variables
+# Mod key. Used for litually everything
+set $mod Mod1
+# Home row function keys
+set $left11 q
+set $left12 w
+set $left13 e
+set $left14 r
+set $left15 t
+set $left21 a
+set $left22 s
+set $left23 d
+set $left24 f
+set $left25 g
+set $left30 less
+set $left31 y
+set $left32 x
+set $left33 c
+set $left34 v
+set $left35 b
+
+set $right10 z
+set $right11 u
+set $right12 i
+set $right13 o
+set $right14 p
+set $right15 udiaeresis
+set $right20 h
+set $right21 j
+set $right22 k
+set $right23 l
+set $right24 odiaeresis
+set $right25 adiaeresis
+set $right30 n
+set $right31 m
+set $right32 comma
+set $right33 period
+set $right34 minus
+
+set $left $right21
+set $up $right22
+set $down $right23
+set $right $right24
+# Font
+set $font pango:DejaVu Sans Mono 8
+# preferred terminal emulator
+set $term alacritty
+# application launcher
+#set $menu wofi --show=drun | xargs swaymsg exec --
+set $menu systemd-run --user --scope sirula
