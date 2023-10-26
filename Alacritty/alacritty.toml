@@ -8,7 +8,7 @@ ipc_socket = false
 TERM = "xterm-256color"
 
 [window]
-opacity = 0.95
+opacity = 0.8
 resize_increments = true
 
 [keyboard]
