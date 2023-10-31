@@ -1,0 +1,8 @@
+font=DejaVu Sans Mono
+border-size=0
+default-timeout=5000
+layer=overlay
+anchor=bottom-right
+background-color=#3F3F3FD0
+width=400
+height=300

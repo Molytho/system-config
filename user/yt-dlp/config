@@ -1,0 +1,15 @@
+# High quality opus
+-f 251
+
+# Output name
+-o %(track)s_%(artist)s_%(album)s_%(release_year)d.%(ext)s
+
+# Audio only
+-x
+
+# Convert youtube covers to 1:1
+--exec "before_dl:/home/robin/Dev/thumbnail_post.bash"
+
+# Embed thumbnail image to disk
+--embed-thumbnail
+
