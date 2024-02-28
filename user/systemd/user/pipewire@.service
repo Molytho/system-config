@@ -1,0 +1,19 @@
+[Unit]
+Description=Additional pipewire instance
+Requires=pipewire.socket
+AssertPathExists=%E/pipewire/%i
+[Service]
+UMask=0077
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+NoNewPrivileges=yes
+RestrictNamespaces=yes
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+Type=simple
+ExecStart=/usr/bin/pipewire -c %i
+Restart=on-failure
+Slice=session.slice
+
+[Install]
+WantedBy=default.target

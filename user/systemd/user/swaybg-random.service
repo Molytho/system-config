@@ -1,0 +1,13 @@
+[Unit]
+Description=Randomized Backgrounds using swaybg
+Documentation=https://github.com/swaywm/swaybg
+PartOf=sway-session.target
+
+[Service]
+ExecStart=/usr/bin/swaybg-random $DIRECTORY $INTERVALL
+Restart=on-failure
+EnvironmentFile=%h/.config/swaybg-random/config
+Slice=session.slice
+
+[Install]
+WantedBy=sway-session.target

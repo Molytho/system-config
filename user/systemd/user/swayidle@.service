@@ -1,0 +1,16 @@
+[Unit]
+Description=Handles session idle events
+Documentation=man:swayidle
+PartOf=sway-session.target
+AssertEnvironment=WAYLAND_DISPLAY
+AssertPathExists=%E/swayidle/%i
+
+[Service]
+ExecStart=/usr/bin/swayidle -w -C "%E/swayidle/%i"
+Restart=on-failure
+UMask=0077
+Slice=session.slice
+
+[Install]
+WantedBy=sway-session.target
+DefaultInstance=config
