@@ -1,0 +1,3 @@
+lock 'swaylock -f -c 000000'
+unlock 'killall -SIGUSR1 swaylock'
+before-sleep 'swaylock -f -c 000000'
