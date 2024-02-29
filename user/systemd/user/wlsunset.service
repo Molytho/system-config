@@ -1,12 +1,18 @@
 [Unit]
 Description=Display colour temperature adjustment
 AssertEnvironment=WAYLAND_DISPLAY
-PartOf=sway-session.target
 
 [Service]
+UMask=0077
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+NoNewPrivileges=yes
+RestrictNamespaces=yes
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged
+SystemCallErrorNumber=EPERM
+
 ExecStart=/usr/bin/wlsunset -l 49 -L 9 -T 5500 -t 4000
 Restart=on-failure
 Slice=session.slice
-
-[Install]
-WantedBy=sway-session.target

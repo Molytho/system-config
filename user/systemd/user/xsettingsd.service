@@ -1,6 +1,5 @@
 [Unit]
-Description=Portal service (wlroots implementation)
-ConditionEnvironment=WAYLAND_DISPLAY
+Description=XSETTINGS-protocol daemon
 
 [Service]
 UMask=0077
@@ -13,7 +12,5 @@ SystemCallFilter=@system-service
 SystemCallFilter=~@privileged
 SystemCallErrorNumber=EPERM
 
-Type=dbus
-BusName=org.freedesktop.impl.portal.desktop.wlr
-ExecStart=/usr/lib/xdg-desktop-portal-wlr
-Restart=on-failure
+ExecStart=/usr/bin/xsettingsd
+Slice=session.slice

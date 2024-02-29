@@ -3,6 +3,16 @@ Description = Maestral daemon for config %i
 Documentation = https://maestral.app
 
 [Service]
+UMask=0077
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+NoNewPrivileges=yes
+RestrictNamespaces=yes
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged
+SystemCallErrorNumber=EPERM
+
 Type = notify
 NotifyAccess = exec
 ExecStart = /usr/bin/maestral start -f -c %i

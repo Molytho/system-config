@@ -1,15 +1,21 @@
 [Unit]
 Description=Lightweight Wayland notification daemon
 Documentation=man:mako(1)
-PartOf=sway-session.target
+AssertEnvironment=WAYLAND_DISPLAY
 
 [Service]
+UMask=0077
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+NoNewPrivileges=yes
+RestrictNamespaces=yes
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged
+SystemCallErrorNumber=EPERM
+
 Type=dbus
 BusName=org.freedesktop.Notifications
-ExecCondition=/bin/sh -c '[ -n "$WAYLAND_DISPLAY" ]'
 ExecStart=/usr/bin/mako
 ExecReload=/usr/bin/makoctl reload
 Slice=session.slice
-
-[Install]
-WantedBy=sway-session.target

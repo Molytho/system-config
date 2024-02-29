@@ -1,15 +1,21 @@
 [Unit]
 Description=Highly customizable Wayland bar for Sway and Wlroots based compositors.
 Documentation=https://github.com/Alexays/Waybar/wiki/
-PartOf=sway-session.target
 
 [Service]
+UMask=0077
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+NoNewPrivileges=yes
+RestrictNamespaces=yes
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged
+SystemCallErrorNumber=EPERM
+
 Type=dbus
 BusName=org.kde.StatusNotifierWatcher
 ExecStart=/usr/bin/waybar
 ExecReload=kill -SIGUSR2 $MAINPID
 Restart=on-failure
 Slice=session.slice
-
-[Install]
-WantedBy=sway-session.target

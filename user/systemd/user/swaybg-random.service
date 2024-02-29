@@ -1,13 +1,19 @@
 [Unit]
 Description=Randomized Backgrounds using swaybg
-Documentation=https://github.com/swaywm/swaybg
-PartOf=sway-session.target
+Documentation=https://github.com/molytho/desktop-utils
 
 [Service]
+UMask=0077
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+NoNewPrivileges=yes
+RestrictNamespaces=yes
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged
+SystemCallErrorNumber=EPERM
+
 ExecStart=/usr/bin/swaybg-random $DIRECTORY $INTERVALL
 Restart=on-failure
 EnvironmentFile=%h/.config/swaybg-random/config
 Slice=session.slice
-
-[Install]
-WantedBy=sway-session.target

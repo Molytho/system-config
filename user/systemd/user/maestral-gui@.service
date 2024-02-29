@@ -1,12 +1,22 @@
 [Unit]
 Description = Maestral gui for config %i
-Documentation = https://github.com/SamSchott/maestral-dropbox/wiki
+Documentation = https://maestral.app
 PartOf=graphical-session.target
 Requires=maestral@%i.service
 After=graphical-session.target maestral@%i.service
-AssertEnvironment=WAYLAND_DISPLAY
 
 [Service]
+UMask=0077
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+NoNewPrivileges=yes
+RestrictNamespaces=yes
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged
+SystemCallErrorNumber=EPERM
+
+Type = simple
 ExecStart = /usr/bin/maestral gui -c %i
 Slice = session.slice
 

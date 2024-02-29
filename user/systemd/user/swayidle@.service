@@ -1,16 +1,25 @@
 [Unit]
 Description=Handles session idle events
 Documentation=man:swayidle
-PartOf=sway-session.target
 AssertEnvironment=WAYLAND_DISPLAY
 AssertPathExists=%E/swayidle/%i
 
 [Service]
+UMask=0077
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+NoNewPrivileges=yes
+RestrictNamespaces=yes
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged
+SystemCallErrorNumber=EPERM
+
+Type = simple
 ExecStart=/usr/bin/swayidle -w -C "%E/swayidle/%i"
 Restart=on-failure
 UMask=0077
 Slice=session.slice
 
 [Install]
-WantedBy=sway-session.target
 DefaultInstance=config
