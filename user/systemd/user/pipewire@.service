@@ -1,7 +1,8 @@
 [Unit]
 Description=Additional pipewire instance
 Requires=pipewire.socket
-AssertPathExists=%E/pipewire/%i
+AssertPathExists=%E/pipewire/%i.conf
+
 [Service]
 UMask=0077
 LockPersonality=yes
@@ -11,7 +12,7 @@ RestrictNamespaces=yes
 SystemCallArchitectures=native
 SystemCallFilter=@system-service
 Type=simple
-ExecStart=/usr/bin/pipewire -c %i
+ExecStart=/usr/bin/pipewire -c %i.conf
 Restart=on-failure
 Slice=session.slice
 
