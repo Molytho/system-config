@@ -3,15 +3,6 @@ Description=PolicyKit authentication agent
 
 [Service]
 UMask=0077
-LockPersonality=yes
-MemoryDenyWriteExecute=yes
-NoNewPrivileges=yes
-RestrictNamespaces=yes
-SystemCallArchitectures=native
-SystemCallFilter=@system-service
-SystemCallFilter=~@privileged
-SystemCallErrorNumber=EPERM
-
 Type=simple
 ExecStart=/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 Restart=on-failure
