@@ -1,0 +1,4 @@
+#!/bin/bash
+
+exec unshare --mount-proc -p --map-current-user -f --propagation unchanged -- \\
+     /usr/bin/steam-runtime -nofriendsui "$@"

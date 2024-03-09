@@ -1,0 +1,24 @@
+#!/bin/bash
+
+if [[ (-z ${SWAYSOCK:-}) ]] || [[ (-z ${WAYLAND_DISPLAY:-}) ]]; then
+    echo Variable missing
+    exit 1
+fi
+
+# Kill existing
+swaymsg [all] kill
+
+sleep 0.1
+
+# Wait for close
+swaynag -t poweroff -m "sway is shuting down" -Z stop "kill $$" &
+
+count=$(swaymsg -t get_tree | grep '"type": "con"' | uniq -c | awk '{print $1}')
+while [[ count -gt 0 ]]; do
+    count=$(swaymsg -t get_tree | grep '"type": "con"' | uniq -c | awk '{print $1}')
+    sleep 1
+done
+
+kill %1
+
+exit 0
