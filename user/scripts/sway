@@ -44,6 +44,6 @@ export WLR_XWAYLAND=~/.local/bin/Xwayland
 #args+=(--unsupported-gpu)
 #args+=(-Dnoscanout)
 
-exec systemd-cat -t sway -- \\
-     systemd-run --user --scope --slice=session.slice -u sway -- \\
+exec systemd-cat -t sway -- \
+     systemd-run --user --scope --slice=session.slice -u sway -- \
      /usr/bin/sway "${args[@]}" "$@"

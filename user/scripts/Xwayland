@@ -5,5 +5,5 @@
 #########################################################################
 #export XWAYLAND_NO_GLAMOR=1
 
-exec systemd-cat -t Xwayland -- \\
+exec systemd-cat -t Xwayland -- \
      /usr/bin/Xwayland "$@"
