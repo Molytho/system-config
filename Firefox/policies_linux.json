@@ -7,6 +7,7 @@
         "DisableFirefoxAccounts": true,
         "DisableFirefoxScreenshots": true,
         "DisableFirefoxStudies": true,
+        "DisableFormHistory": true,
         "DisablePocket": true,
         "DisableTelemetry": true,
         "DontCheckDefaultBrowser": true,
@@ -41,6 +42,7 @@
             "Snippets": true
         },
         "HardwareAcceleration": true,
+        "HttpsOnlyMode": "force_enabled",
         "NetworkPrediction": false,
         "NoDefaultBookmarks": true,
         "OfferToSaveLogins": false,
@@ -83,14 +85,12 @@
                 "Value": "strict",
                 "Status": "user"
             },
-            "dom.security.https_only_mode": {
-                "Value": true,
-                "Status": "locked"
-            },
             "media.ffmpeg.vaapi.enabled": {
                 "Value": true,
                 "Status": "user"
             }
-        }
+        },
+        "StartDownloadsInTempDirectory": true,
+        "TranslateEnabled": false
     }
 }

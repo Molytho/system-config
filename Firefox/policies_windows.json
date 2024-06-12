@@ -8,12 +8,14 @@
         "DisableFirefoxAccounts": true,
         "DisableFirefoxScreenshots": true,
         "DisableFirefoxStudies": true,
+        "DisableFormHistory": true,
         "DisablePocket": true,
         "DisableTelemetry": true,
         "DNSOverHTTPS": {
             "Enabled": true,
             "ProviderURL": "https://dns.quad9.net/dns-query",
-            "Locked": true
+            "Locked": true,
+            "Fallback": false
         },
         "DontCheckDefaultBrowser": true,
         "EnableTrackingProtection": {
@@ -47,6 +49,7 @@
             "Snippets": true
         },
         "HardwareAcceleration": true,
+        "HttpsOnlyMode": "force_enabled",
         "NetworkPrediction": false,
         "NoDefaultBookmarks": true,
         "OfferToSaveLogins": false,
@@ -88,11 +91,9 @@
             "browser.contentblocking.category": {
                 "Value": "strict",
                 "Status": "user"
-            },
-            "dom.security.https_only_mode": {
-                "Value": true,
-                "Status": "locked"
             }
-        }
+        },
+        "StartDownloadsInTempDirectory": true,
+        "TranslateEnabled": false
     }
 }
