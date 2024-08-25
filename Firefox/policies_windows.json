@@ -5,6 +5,7 @@
             "Behavior": "reject-foreign"
         },
         "DisableDefaultBrowserAgent": true,
+        "DisableAccounts": true,
         "DisableFirefoxAccounts": true,
         "DisableFirefoxScreenshots": true,
         "DisableFirefoxStudies": true,
@@ -53,6 +54,8 @@
         "NetworkPrediction": false,
         "NoDefaultBookmarks": true,
         "OfferToSaveLogins": false,
+        "OverrideFirstRunPage": "",
+        "OverridePostUpdatePage": "",
         "PasswordManagerEnabled": false,
         "PDFjs": {
             "Enabled": true,
@@ -91,9 +94,21 @@
             "browser.contentblocking.category": {
                 "Value": "strict",
                 "Status": "user"
+            },
+            "privacy.globalprivacycontrol.enabled": {
+                "Value": true,
+                "Status": "user"
             }
         },
         "StartDownloadsInTempDirectory": true,
-        "TranslateEnabled": false
+        "TranslateEnabled": false,
+        "UserMessaging": {
+            "ExtensionRecommendations": false,
+            "FeatureRecommendations": false,
+            "UrlbarInterventions": false,
+            "SkipOnboarding": false,
+            "MoreFromMozilla": false,
+            "Locked": true
+        }
     }
 }
