@@ -3,7 +3,8 @@ Description=PolicyKit authentication agent
 
 [Service]
 UMask=0077
-Type=simple
+
+Type=exec
 ExecStart=/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 Restart=on-failure
 Slice=session.slice

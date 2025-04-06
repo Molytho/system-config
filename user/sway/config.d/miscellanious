@@ -1,5 +1,19 @@
 ### Misellanious
 #
+## Idle configuration
+#
+# Lock screen
+# Config is read from ~/.config/swayidle/config
+#                 and ~/.config/swayidle/config_timeout
+# Handled through user service
+#
 ## XWayland
 #
 xwayland enabled
+
+mode "shortcut" {
+    bindsym $mod+$left30 mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+$left30 mode "shortcut"

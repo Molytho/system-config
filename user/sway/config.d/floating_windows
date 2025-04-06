@@ -1,3 +1,6 @@
 for_window [app_id="^org.keepassxc.KeePassXC$" title="(Datenbank entsperren|Browser-Zugriffsanfrage|KeePassXC - Zugriffsanfrage)"] floating enable
-for_window [app_id="^ferdi$" title="^$"] floating enable
+for_window [app_id="pinentry-qt"] floating enable
 for_window [class="^zoom$" window_type="unknown"] floating enable
+for_window [class="^zoom$" title="(^Chat$|Teilnehmer)"] move scratchpad
+for_window [title="^Freundesliste$"] floating enable
+for_window [title="^Steam –"] floating enable

@@ -26,7 +26,7 @@ SystemCallFilter=@system-service
 SystemCallFilter=~@privileged
 SystemCallErrorNumber=EPERM
 
-Type=simple
+Type=exec
 ExecStart=/usr/bin/pipewire
 Restart=on-failure
 Slice=session.slice

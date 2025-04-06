@@ -46,5 +46,4 @@ set $font pango:DejaVu Sans Mono 8
 # preferred terminal emulator
 set $term alacritty
 # application launcher
-#set $menu wofi --show=drun | xargs swaymsg exec --
-set $menu systemd-run --user --scope sirula
+set $menu systemd-cat -t apps systemd-run --user --scope sirula

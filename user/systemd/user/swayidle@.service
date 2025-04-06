@@ -6,10 +6,18 @@ AssertPathExists=%E/swayidle/%i
 
 [Service]
 UMask=0077
-Type = simple
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+NoNewPrivileges=yes
+RestrictNamespaces=yes
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged
+SystemCallErrorNumber=EPERM
+
+Type = exec
 ExecStart=/usr/bin/swayidle -w -C "%E/swayidle/%i"
 Restart=on-failure
-UMask=0077
 Slice=session.slice
 
 [Install]

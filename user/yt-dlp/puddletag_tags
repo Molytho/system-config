@@ -1,4 +1,4 @@
-%title%_%artist%_%album%_%year%
+%title%_%artist%_%album%_%year%_%track%_%tracktotal%
 
 %(track)s_%(artist)s_%(album)s_%(release_year)d_%(playlist_index)d_%(playlist_count)d.%(ext)s
 %title%_%artist%_%album%_%year%_%track%_%tracktotal%
