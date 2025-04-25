@@ -1,8 +1,20 @@
-font=DejaVu Sans Mono
+on-notify=exec pw-play /usr/share/sounds/freedesktop/stereo/message.oga
+
+font=DejaVu Sans Mono 12
+background-color=#3F3F3FD0
+width=400
+height=180
+outer-margin=12,0
+margin=12,0
+padding=12
 border-size=0
 default-timeout=5000
 layer=overlay
 anchor=bottom-right
-background-color=#3F3F3FD0
-width=400
-height=300
+
+[urgency=critical]
+background-color=#FF3F3FD0
+
+[mode=do-not-disturb]
+invisible=1
+on-notify=none

@@ -1,0 +1,4 @@
+[screencast]
+max_fps=60
+exec_before=makoctl mode -a do-not-disturb
+exec_after=makoctl mode -r do-not-disturb
