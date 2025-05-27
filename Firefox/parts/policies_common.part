@@ -195,13 +195,4 @@
             "MoreFromMozilla": false,
             "FirefoxLabs": true,
             "Locked": true
-        },
-        "DisableDefaultBrowserAgent": true,
-        "DNSOverHTTPS": {
-            "Enabled": true,
-            "ProviderURL": "https://dns.quad9.net/dns-query",
-            "Locked": true,
-            "Fallback": false
         }
-    }
-}

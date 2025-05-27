@@ -89,6 +89,30 @@
                 "Value": "strict",
                 "Status": "user"
             },
+            "browser.region.update.enabled": {
+                "Value": false,
+                "Status": "user"
+            },
+            "browser.region.network.url": {
+                "Value": "",
+                "Status": "user"
+            },
+            "browser.startup.homepage_override.mstone": {
+                "Value": "ignore",
+                "Status": "user"
+            },
+            "browser.vpn_promo.enabled": {
+                "Value": false,
+                "Status": "user"
+            },
+            "browser.cache.disk.enable": {
+                "Value": false,
+                "Status": "default"
+            },
+            "browser.cache.disk_cache_ssl": {
+                "Value": false,
+                "Status": "default"
+            },
             "privacy.globalprivacycontrol.enabled": {
                 "Value": true,
                 "Status": "user"
@@ -96,9 +120,72 @@
             "media.ffmpeg.vaapi.enabled": {
                 "Value": true,
                 "Status": "user"
+            },
+            "extensions.blocklist.enabled": {
+                "Value": false,
+                "Status": "user"
+            },
+            "extensions.getAddons.cache.enabled": {
+                "Value": false,
+                "Status": "user"
+            },
+            "extensions.webextensions.restrictedDomains": {
+                "Value": "",
+                "Status": "user"
+            },
+            "network.connectivity-service.enabled": {
+                "Value": false,
+                "Status": "user"
             }
         },
         "StartDownloadsInTempDirectory": true,
+        "SearchEngines": {
+            "Add": [
+                {
+                    "Name": "ArchLinux User Repository",
+                    "URLTemplate": "https://aur.archlinux.org/packages?K={searchTerms}",
+                    "Method": "GET",
+                    "IconURL": "https://archlinux.org/static/favicon.png",
+                    "Alias": "alaur"
+                },
+                                {
+                    "Name": "ArchLinux Packages",
+                    "URLTemplate": "https://archlinux.org/packages/?q={searchTerms}",
+                    "Method": "GET",
+                    "IconURL": "https://archlinux.org/static/favicon.png",
+                    "Alias": "alpkgs"
+                },
+                                {
+                    "Name": "ArchLinux Wiki",
+                    "URLTemplate": "https://wiki.archlinux.org/index.php?search={searchTerms}",
+                    "Method": "GET",
+                    "IconURL": "https://archlinux.org/static/favicon.png",
+                    "Alias": "alwiki"
+                },
+                {
+                    "Name": "ArchLinux Manual Pages",
+                    "URLTemplate": "https://man.archlinux.org/search?q={searchTerms}",
+                    "Method": "GET",
+                    "IconURL": "https://archlinux.org/static/favicon.png",
+                    "Alias": "alman"
+                },
+                {
+                    "Name": "ArchLinux PKGBUILD",
+                    "URLTemplate": "https://gitlab.archlinux.org/archlinux/packaging/packages/{searchTerms}/-/blob/main/PKGBUILD?ref_type=heads",
+                    "Method": "GET",
+                    "IconURL": "https://archlinux.org/static/favicon.png",
+                    "Alias": "alsrc"
+                }
+            ],
+            "Default": "DuckDuckGo",
+            "PreventInstalls": true,
+            "Remove": [
+                "Bing",
+                "eBay",
+                "Ecosia",
+                "LEO Eng-Deu"
+            ]
+        },
         "TranslateEnabled": false,
         "UserMessaging": {
             "ExtensionRecommendations": false,
