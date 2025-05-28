@@ -1,0 +1,83 @@
+{
+    "policies": {
+        "CaptivePortal": false,
+        "Cookies": {
+            "Behavior": "reject"
+        },
+        "DisableTelemetry": true,
+        "HardwareAcceleration": true,
+        "NetworkPrediction": false,
+        "OfferToSaveLogins": false,
+        "PasswordManagerEnabled": false,
+        "PDFjs": {
+            "Enabled": true,
+            "EnablePermissions": false
+        },
+        "Preferences": {
+            "browser.region.update.enabled": {
+                "Value": false,
+                "Status": "user"
+            },
+            "browser.region.network.url": {
+                "Value": "",
+                "Status": "user"
+            },
+            "browser.cache.disk.enable": {
+                "Value": false,
+                "Status": "default"
+            },
+            "browser.cache.disk_cache_ssl": {
+                "Value": false,
+                "Status": "default"
+            },
+            "privacy.globalprivacycontrol.functionality.enabled": {
+                "Value": true,
+                "Status": "user"
+            },
+            "privacy.globalprivacycontrol.enabled": {
+                "Value": true,
+                "Status": "user"
+            },
+            "extensions.blocklist.enabled": {
+                "Value": false,
+                "Status": "user"
+            },
+            "extensions.getAddons.cache.enabled": {
+                "Value": false,
+                "Status": "user"
+            },
+            "extensions.webextensions.restrictedDomains": {
+                "Value": "",
+                "Status": "user"
+            },
+            "network.connectivity-service.enabled": {
+                "Value": false,
+                "Status": "user"
+            },
+            "mailnews.display.html_as": {
+                "Value": 3,
+                "Status": "default"
+            },
+            "mailnews.display.disallow_mime_handlers": {
+                "Value": 1,
+                "Status": "default"
+            },
+            "mail.default_send_format": {
+                "Value": 1,
+                "Status": "default"
+            }
+        },
+        "PromptForDownloadLocation": true,
+        "SearchEngines": {
+            "Default": "DuckDuckGo",
+            "PreventInstalls": true,
+            "Remove": [
+                "Google",
+                "Bing",
+                "eBay",
+                "Ecosia",
+                "LEO Eng-Deu"
+            ]
+        }
+    }
+}
