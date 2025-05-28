@@ -117,10 +117,6 @@
                 "Value": true,
                 "Status": "user"
             },
-            "media.ffmpeg.vaapi.enabled": {
-                "Value": true,
-                "Status": "user"
-            },
             "extensions.blocklist.enabled": {
                 "Value": false,
                 "Status": "user"
