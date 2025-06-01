@@ -6,6 +6,12 @@
         },
         "DisableTelemetry": true,
         "HardwareAcceleration": true,
+        "InAppNotification": {
+            "DonationEnabled": true,
+            "SurveyEnabled": true,
+            "MessageEnabled": true,
+            "Disabled": true
+        },
         "NetworkPrediction": false,
         "OfferToSaveLogins": false,
         "PasswordManagerEnabled": false,
