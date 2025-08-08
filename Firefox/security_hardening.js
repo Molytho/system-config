@@ -11,5 +11,5 @@ pref("toolkit.coverage.endpoint.base", "");
 pref("toolkit.coverage.opt-out", true);
 pref("toolkit.telemetry.coverage.opt-out", true);
 
-// Berwertungsfeature
+// Bewertungsfeature
 pref("app.normandy.enabled", false);
