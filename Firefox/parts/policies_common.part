@@ -16,7 +16,8 @@
             "Value": true,
             "Cryptomining": true,
             "Fingerprinting": true,
-            "EmailTracking": true
+            "EmailTracking": true,
+            "SuspectedFingerprinting": true
         },
         "EncryptedMediaExtensions": {
             "Enabled": false
@@ -78,16 +79,20 @@
                 ],
                 "Default": "block-audio-video",
                 "Locked": false
+            },
+            "VirtualReality": {
+                "BlockNewRequests": true,
+                "Locked": true
+            },
+            "ScreenShare": {
+                "BlockNewRequests":false,
+                "Locked": false
             }
         },
         "Preferences": {
             "browser.backspace_action": {
                 "Value": 0,
                 "Status": "default"
-            },
-            "browser.contentblocking.category": {
-                "Value": "strict",
-                "Status": "user"
             },
             "browser.region.update.enabled": {
                 "Value": false,
