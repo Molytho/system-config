@@ -36,14 +36,6 @@
                 "Value": false,
                 "Status": "default"
             },
-            "privacy.globalprivacycontrol.functionality.enabled": {
-                "Value": true,
-                "Status": "user"
-            },
-            "privacy.globalprivacycontrol.enabled": {
-                "Value": true,
-                "Status": "user"
-            },
             "extensions.blocklist.enabled": {
                 "Value": false,
                 "Status": "user"
