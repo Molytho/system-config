@@ -44,6 +44,12 @@
             "SponsoredPocket": false,
             "Snippets": true
         },
+        "GenerativeAI": {
+            "Chatbot": false,
+            "LinkPreviews": false,
+            "TabGroups": false,
+            "Locked": true
+        },
         "HardwareAcceleration": true,
         "HttpsOnlyMode": "force_enabled",
         "NetworkPrediction": false,
@@ -196,6 +202,7 @@
             "MoreFromMozilla": false,
             "FirefoxLabs": true,
             "Locked": true
-        }
+        },
+        "VisualSearchEnabled": false
     }
 }
