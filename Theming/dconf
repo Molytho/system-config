@@ -1,0 +1,7 @@
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+cursor-size=24
+cursor-theme='Breeze'
+font-name='FreeSans,  10'
+gtk-theme='Adwaita-dark'
+icon-theme='Adwaita'
