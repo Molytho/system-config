@@ -1,0 +1,10 @@
+#!/bin/bash
+
+unset SDL_VIDEODRIVER
+
+SERVICE_NAME=app-com.valve.steam.service
+if $(systemctl --user is-active "$SERVICE_NAME" --quiet); then
+    /usr/bin/steam "$@"
+else
+    exec systemd-run --user -u "$SERVICE_NAME" -- /usr/bin/steam "$@"
+fi
