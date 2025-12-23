@@ -1,0 +1,50 @@
+{
+    "default_server_name": "matrix.org",
+    "default_server_config": {
+        "m.homeserver": {
+            "base_url": "https://matrix-client.matrix.org"
+        },
+        "m.identity_server": {
+            "base_url": "https://vector.im"
+        }
+    },
+    "features": {
+        "feature_pinning": true,
+        "feature_video_rooms": true,
+        "feature_group_calls": true,
+        "feature_element_call_video_rooms": true
+    },
+    "show_labs_settings": true,
+    "default_federate": true,
+    "default_country_code": "DE",
+    "room_directory": {
+        "servers": []
+    },
+    "default_theme": "dark",
+    "brand": "Element",
+    "disable_3pid_login": false,
+    "disable_login_language_selector": false,
+    "disable_guests": false,
+    "jitsi": {
+        "externalApiUrl": "https://meet.entropia.de/libs/external_api.min.js",
+        "preferredDomain": "meet.entropia.de"
+    },
+    "integrations_jitsi_widget_url": "https://dimension.t2bot.io/widgets/jitsi",
+    "element_call": {
+        "url": "https://call.element.io"
+    },
+    "bug_report_endpoint_url": "https://element.io/bugreports/submit",
+    "uisi_autorageshake_app": "element-auto-uisi",
+    "integrations_rest_url": "https://dimension.t2bot.io/api/v1/scalar",
+    "integrations_ui_url": "https://dimension.t2bot.io/riot",
+    "integrations_widgets_urls": [
+        "https://dimension.t2bot.io/widgets"
+    ],
+    "enable_presence_by_hs_url": {
+        "https://matrix.org": false,
+        "https://matrix-client.matrix.org": false
+    },
+    "setting_defaults": {
+        "RustCrypto.staged_rollout_percent": 100
+    }
+}
