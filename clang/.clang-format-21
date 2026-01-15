@@ -80,7 +80,7 @@ PenaltyIndentedWhitespace: 1
 PenaltyExcessCharacter: 1
 PenaltyReturnTypeOnItsOwnLine: 40
 PointerAlignment: Right
-QualifierAlignment: Leave
+QualifierAlignment: Custom
 QualifierOrder: [static, constexpr, inline, const, volatile, restrict, friend, type]
 ReferenceAlignment: Right
 ReflowComments: IndentOnly
