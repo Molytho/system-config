@@ -14,7 +14,6 @@
         },
         "NetworkPrediction": false,
         "OfferToSaveLogins": false,
-        "PasswordManagerEnabled": false,
         "PDFjs": {
             "Enabled": true,
             "EnablePermissions": false
