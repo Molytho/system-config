@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -euo pipefail
+
+readonly SCRIPT_PATH="${ readlink -f "$0"; }"
+readonly SCRIPT_DIR="${SCRIPT_PATH%/*}"
+
+cat "$SCRIPT_DIR"/parts/policies_{common,clear_on_shutdown,end}.part > "$SCRIPT_DIR/policies_linux.json"
+cat "$SCRIPT_DIR"/parts/policies_{common,clear_on_shutdown,windows,end}.part > "$SCRIPT_DIR/policies_linux.json"

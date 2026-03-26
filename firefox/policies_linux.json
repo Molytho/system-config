@@ -189,12 +189,20 @@
                     "Method": "GET",
                     "IconURL": "https://archlinux.org/static/favicon.png",
                     "Alias": "alsrc"
+                },
+                {
+                    "Name": "DuckDuckGo NoAI",
+                    "URLTemplate": "https://noai.duckduckgo.com/?q={searchTerms}",
+                    "Method": "GET",
+                    "IconURL": "https://noai.duckduckgo.com/favicon.ico",
+                    "Alias": "@duckduckgo"
                 }
             ],
-            "Default": "DuckDuckGo",
+            "Default": "DuckDuckGo NoAI",
             "PreventInstalls": true,
             "Remove": [
                 "Bing",
+                "DuckDuckGo",
                 "eBay",
                 "Ecosia",
                 "LEO Eng-Deu"
@@ -210,6 +218,21 @@
             "FirefoxLabs": true,
             "Locked": true
         },
-        "VisualSearchEnabled": false
+        "VisualSearchEnabled": false,
+        "SanitizeOnShutdown": {
+            "Cache": true,
+            "Cookies": true,
+            "FormData": true,
+            "History": false,
+            "Sessions": true,
+            "SiteSettings": false
+        },
+        "DisableDefaultBrowserAgent": true,
+        "DNSOverHTTPS": {
+            "Enabled": true,
+            "ProviderURL": "https://dns.quad9.net/dns-query",
+            "Locked": true,
+            "Fallback": false
+        }
     }
 }

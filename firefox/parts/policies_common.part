@@ -189,12 +189,20 @@
                     "Method": "GET",
                     "IconURL": "https://archlinux.org/static/favicon.png",
                     "Alias": "alsrc"
+                },
+                {
+                    "Name": "DuckDuckGo NoAI",
+                    "URLTemplate": "https://noai.duckduckgo.com/?q={searchTerms}",
+                    "Method": "GET",
+                    "IconURL": "https://noai.duckduckgo.com/favicon.ico",
+                    "Alias": "@duckduckgo"
                 }
             ],
-            "Default": "DuckDuckGo",
+            "Default": "DuckDuckGo NoAI",
             "PreventInstalls": true,
             "Remove": [
                 "Bing",
+                "DuckDuckGo",
                 "eBay",
                 "Ecosia",
                 "LEO Eng-Deu"
